@@ -28,9 +28,15 @@ function  generateUniqueRandomNumber(min, max, numbers) {
 for (let i = 0; i < 5; i++) {
     let number = generateUniqueRandomNumber(1, 100, numbers);
     let boxNumber = document.createElement('div');
-    boxNumber.classList.add('p-4', 'mr-circle', 'd-flex', 'justify-content-center', 'align-items-center' );
-    document.querySelector('.container').appendChild(boxNumber);
+    boxNumber.classList.add('p-4', 'mr-circle', 'd-flex', 'justify-content-center', 'align-items-center', );
+    document.querySelector('.container-number').appendChild(boxNumber);
     boxNumber.innerHTML = number;
 }
 console.log(numbers);
+
+function removeNumbers() {
+    document.querySelector('.container-number').classList.add('d-none');
+};
+
+setTimeout(removeNumbers, 4000);
 
