@@ -24,4 +24,13 @@ function  generateUniqueRandomNumber(min, max, numbers) {
     numbers.push(randomNumber);
     return randomNumber;
 };
-console.log(generateUniqueRandomNumber(1, 100, numbers));
+
+for (let i = 0; i < 5; i++) {
+    let number = generateUniqueRandomNumber(1, 100, numbers);
+    let boxNumber = document.createElement('div');
+    boxNumber.classList.add('p-4', 'mr-circle', 'd-flex', 'justify-content-center', 'align-items-center' );
+    document.querySelector('.container').appendChild(boxNumber);
+    boxNumber.innerHTML = number;
+}
+console.log(numbers);
+
