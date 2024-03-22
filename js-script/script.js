@@ -49,8 +49,24 @@ function generateImput(val) {
     document.querySelector('.imput-container').appendChild(input);
 } 
 
+const userNumberArray = [];
+let userNumber;
+
 elbuttonComparison = document.querySelector('.btn.btn-success');
 
 elbuttonComparison.addEventListener('click', () => {
-    
+    let userInput = document.querySelectorAll('.form-control');
+    for (let i = 0; i < userInput.length; i++) {
+        userNumber = parseInt(userInput[i].value);
+        console.log(userNumber);
+        userNumberArray.push(userNumber);
+    };
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === userNumberArray[i]) {
+            document.querySelector('.container-result').innerHTML += ` ${userNumberArray[i]}, `
+        } else {
+            document.querySelector('.container-result').innerHTML += ` ${userNumberArray[i]}, `
+        }
+    };
+    console.log(userNumberArray);
 })
