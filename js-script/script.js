@@ -28,9 +28,10 @@ function  generateUniqueRandomNumber(min, max, numbers) {
 for (let i = 0; i < 5; i++) {
     let number = generateUniqueRandomNumber(1, 100, numbers);
     let boxNumber = document.createElement('div');
-    boxNumber.classList.add('p-4', 'mr-circle', 'd-flex', 'justify-content-center', 'align-items-center', );
+    boxNumber.classList.add('p-4', 'mr-circle', 'd-flex', 'justify-content-center', 'imput-small', 'align-items-center', );
     document.querySelector('.container-number').appendChild(boxNumber);
     boxNumber.innerHTML = number;
+    generateImput(i);
 }
 console.log(numbers);
 
@@ -40,3 +41,16 @@ function removeNumbers() {
 
 setTimeout(removeNumbers, 4000);
 
+function generateImput(val) {
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.id = val;
+    input.classList.add('form-control', 'm-4');
+    document.querySelector('.imput-container').appendChild(input);
+} 
+
+elbuttonComparison = document.querySelector('.btn.btn-success');
+
+elbuttonComparison.addEventListener('click', () => {
+    
+})
