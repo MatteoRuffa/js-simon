@@ -63,9 +63,9 @@ elbuttonComparison.addEventListener('click', () => {
     };
     for (let i = 0; i < numbers.length; i++) {
         if (numbers[i] === userNumberArray[i]) {
-            document.querySelector('.container-result').innerHTML += ` ${userNumberArray[i]}, `
+            document.querySelector('.container-result').innerHTML += `${userNumberArray[i]} è corretto!, `
         } else {
-            document.querySelector('.container-result').innerHTML += ` ${userNumberArray[i]}, `
+            document.querySelector('.container-result').innerHTML += `${userNumberArray[i]} è sbagliato!, `
         }
     };
     console.log(userNumberArray);
